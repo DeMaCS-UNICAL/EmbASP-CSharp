@@ -114,11 +114,11 @@
     <Compile Include="it\unical\mat\parsers\asp\dlv2\DLV2ParserBaseVisitor.cs" />
     <Compile Include="it\unical\mat\parsers\asp\dlv2\DLV2ParserBaseVisitorImplementation.cs" />
     <Compile Include="it\unical\mat\parsers\asp\dlv2\DLV2ParserVisitor.cs" />
-    <Compile Include="it\unical\mat\parsers\asp\idlv\IDLVLexer.cs" />
-    <Compile Include="it\unical\mat\parsers\asp\idlv\IDLVParser.cs" />
-    <Compile Include="it\unical\mat\parsers\asp\idlv\IDLVParserBaseVisitor.cs" />
-    <Compile Include="it\unical\mat\parsers\asp\idlv\IDLVParserBaseVisitorImplementation.cs" />
-    <Compile Include="it\unical\mat\parsers\asp\idlv\IDLVParserVisitor.cs" />
+    <Compile Include="it\unical\mat\parsers\datalog\idlv\IDLVLexer.cs" />
+    <Compile Include="it\unical\mat\parsers\datalog\idlv\IDLVParser.cs" />
+    <Compile Include="it\unical\mat\parsers\datalog\idlv\IDLVParserBaseVisitor.cs" />
+    <Compile Include="it\unical\mat\parsers\datalog\idlv\IDLVParserBaseVisitorImplementation.cs" />
+    <Compile Include="it\unical\mat\parsers\datalog\idlv\IDLVParserVisitor.cs" />
     <Compile Include="it\unical\mat\parsers\asp\dlvhex\DLVHEXLexer.cs" />
     <Compile Include="it\unical\mat\parsers\asp\dlvhex\DLVHEXParser.cs" />
     <Compile Include="it\unical\mat\parsers\asp\dlvhex\DLVHEXParserBaseVisitor.cs" />
