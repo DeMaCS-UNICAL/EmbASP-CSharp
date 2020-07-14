@@ -34,11 +34,11 @@ namespace it.unical.mat.parsers.datalog.idlv
             return null;
         }
 
-        public static void Parse(IDatalogDataCollection answerSets, string atomsList, bool two_stageParsing)
+        public static void Parse(IDatalogDataCollection minimalModels, string atomsList, bool two_stageParsing)
         {
             CommonTokenStream tokens = new CommonTokenStream(new IDLVLexer(CharStreams.fromstring(atomsList)));
             IDLVParser parser = new IDLVParser(tokens);
-            IDLVParserBaseVisitorImplementation visitor = new IDLVParserBaseVisitorImplementation(answerSets);
+            IDLVParserBaseVisitorImplementation visitor = new IDLVParserBaseVisitorImplementation(minimalModels);
 
             if (!two_stageParsing)
             {
