@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using Antlr4.Runtime;
 using Antlr4.Runtime.Atn;
 
-namespace it.unical.mat.parsers.asp
+namespace it.unical.mat.parsers.datalog
 {
     public class DatalogParser : DatalogGrammarBaseVisitor<object>
     {
-        private readonly List<string> termList = new List<string>();
+        private static List<string> termList = new List<string>();
 
         private DatalogParser()
         {
@@ -17,8 +17,8 @@ namespace it.unical.mat.parsers.asp
         public static String[] ParseParametersFromAtom(string atom)
         {
             termList.Clear();
-            CommonTokenStream tokens = new CommonTokenStream(new ASPGrammarLexer(CharStreams.fromstring(atom)));
-            ASPGrammarParser parser = new ASPGrammarParser(tokens);
+            CommonTokenStream tokens = new CommonTokenStream(new DatalogGrammarLexer(CharStreams.fromstring(atom)));
+            DatalogGrammarParser parser = new DatalogGrammarParser(tokens);
             DatalogParser visitor = new DatalogParser();
             parser.Interpreter.PredictionMode = PredictionMode.SLL;
 

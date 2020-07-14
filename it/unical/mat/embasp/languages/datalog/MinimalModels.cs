@@ -1,4 +1,6 @@
+using it.unical.mat.parsers.datalog;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Collections.ObjectModel;
 using System.Linq;
 
@@ -22,10 +24,11 @@ namespace it.unical.mat.embasp.languages.datalog
             {
                 if (minimalModels == null)
                 {
-                    minimalModels = new List<MinimalModel>();
+                    minimalModels = new HashSet<MinimalModel>();
                     Parse();
                 }
-                return new ReadOnlyCollection<MinimalModel>(minimalModels);
+
+                return ImmutableHashSet.Create<MinimalModel>(minimalModels.ToArray());
             }
         }
 

@@ -1,9 +1,6 @@
-using it.unical.mat.parsers.asp.clingo;
-using it.unical.mat.parsers.asp.dlv;
-using it.unical.mat.parsers.asp.dlv2;
-using it.unical.mat.parsers.asp.dlvhex;
+using it.unical.mat.parsers.datalog.idlv;
 
-namespace it.unical.mat.parsers.asp
+namespace it.unical.mat.parsers.datalog
 {
     public static class DatalogSolversParser
     {

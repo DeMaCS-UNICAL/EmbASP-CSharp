@@ -1,41 +1,40 @@
+﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
 
 namespace it.unical.mat.embasp.languages.datalog
 {
-    using Output = it.unical.mat.embasp.@base.Output;
-
-    public abstract class MinimalModels : Output, IDatalogDataCollection
+    public class MinimalModel
     {
-        protected internal ISet<MinimalModel> minimalModels;
+        private readonly ISet<string> value;
+        private ISet<object> atoms;
 
-        public MinimalModels(string @out) : base(@out) { }
+        public MinimalModel(ISet<string> output)
+        {
+            value = output;
+        }
 
-        public MinimalModels(string @out, string err) : base(@out, err) { }
+        public virtual ISet<string> GetAtomsAsStringList => value;
 
-        public override object Clone() => base.Clone();
 
-        public virtual ISet<MinimalModel> Minimalmodels
+        public virtual ISet<object> Atoms
         {
             get
             {
-                if (minimalModels == null)
+                if (atoms == null)
                 {
-                    minimalModels = new List<MinimalModel>();
-                    Parse();
+                    atoms = new HashSet<object>();
+                    DatalogMapper mapper = DatalogMapper.Instance;
+                    foreach (String atom in value)
+                    {
+                        object obj = mapper.GetObject(atom);
+                        if (obj != null)
+                            atoms.Add(obj);
+                    }
                 }
-                return new ReadOnlyCollection<MinimalModel>(minimalModels);
+                return atoms;
             }
         }
 
-        public virtual string MinimalModelsAsString => output;
-
-        public void AddMinimalModel(MinimalModel minMod)
-        {
-            minimalModels.Add(minMod);
-        }
-
-
+        public override string ToString() => value.ToString();
     }
 }

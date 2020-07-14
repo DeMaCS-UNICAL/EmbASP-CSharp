@@ -1,5 +1,5 @@
 using EmbASP.it.unical.mat.embasp.languages.asp;
-using it.unical.mat.parsers.asp;
+using it.unical.mat.parsers.datalog;
 using System;
 using System.Collections.Generic;
 
@@ -34,7 +34,7 @@ namespace it.unical.mat.embasp.languages.datalog
 
                 object objectTerm = parametersMap[i];
                 if (objectTerm == null)
-                    throw new IllegalTermException("Wrong term number of predicate " + predicate);
+                    throw new asp.IllegalTermException("Wrong term number of predicate " + predicate);
 
                 if (objectTerm is int?)
                     atom += objectTerm + "";
@@ -58,7 +58,8 @@ namespace it.unical.mat.embasp.languages.datalog
 
         protected internal override string[] GetParam(string @string)
         {
-            return DatalogParser.Parse(@string).GetParameters();
+
+            return DatalogParser.ParseParametersFromAtom(@string);
         }
     }
 }
