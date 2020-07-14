@@ -47,6 +47,9 @@
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\MSTest.TestFramework.2.0.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Collections.Immutable.1.7.1\lib\net461\System.Collections.Immutable.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -71,6 +74,10 @@
     <Compile Include="it\unical\mat\embasp\languages\asp\IllegalTermException.cs" />
     <Compile Include="it\unical\mat\embasp\languages\asp\PredicateNotValidException.cs" />
     <Compile Include="it\unical\mat\embasp\languages\asp\SymbolicConstant.cs" />
+    <Compile Include="it\unical\mat\embasp\languages\datalog\DatalogInputProgram.cs" />
+    <Compile Include="it\unical\mat\embasp\languages\datalog\DatalogMapper.cs" />
+    <Compile Include="it\unical\mat\embasp\languages\datalog\MinimalModel.cs" />
+    <Compile Include="it\unical\mat\embasp\languages\datalog\MinimalModels.cs" />
     <Compile Include="it\unical\mat\embasp\languages\Id.cs" />
     <Compile Include="it\unical\mat\embasp\languages\IllegalAnnotationException.cs" />
     <Compile Include="it\unical\mat\embasp\languages\Mapper.cs" />
@@ -102,6 +109,13 @@
     <Compile Include="it\unical\mat\parsers\asp\asp_parser_base\ASPGrammarLexer.cs" />
     <Compile Include="it\unical\mat\parsers\asp\asp_parser_base\ASPGrammarParser.cs" />
     <Compile Include="it\unical\mat\parsers\asp\asp_parser_base\ASPGrammarVisitor.cs" />
+    <Compile Include="it\unical\mat\parsers\datalog\datalog_parser_base\DatalogGrammarBaseVisitor.cs" />
+    <Compile Include="it\unical\mat\parsers\datalog\datalog_parser_base\DatalogGrammarLexer.cs" />
+    <Compile Include="it\unical\mat\parsers\datalog\datalog_parser_base\DatalogGrammarParser.cs" />
+    <Compile Include="it\unical\mat\parsers\datalog\datalog_parser_base\DatalogGrammarVisitor.cs" />
+    <Compile Include="it\unical\mat\parsers\datalog\DatalogParser.cs" />
+    <Compile Include="it\unical\mat\parsers\datalog\DatalogSolversParser.cs" />
+    <Compile Include="it\unical\mat\parsers\datalog\IDatalogDataCollection.cs" />
     <Compile Include="it\unical\mat\parsers\asp\clingo\ClingoLexer.cs" />
     <Compile Include="it\unical\mat\parsers\asp\clingo\ClingoParser.cs" />
     <Compile Include="it\unical\mat\parsers\asp\clingo\ClingoParserBaseVisitor.cs" />
