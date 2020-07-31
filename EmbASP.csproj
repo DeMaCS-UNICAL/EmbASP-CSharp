@@ -151,6 +151,7 @@
     <Compile Include="it\unical\mat\parsers\pddl\solver_planning_domains\SPDGrammarVisitor.cs" />
     <Compile Include="it\unical\mat\test\language\asp\Arity0.cs" />
     <Compile Include="it\unical\mat\test\language\asp\ASPMapperTest.cs" />
+    <Compile Include="it\unical\mat\test\language\datalog\DatalogMapperTest.cs" />
     <Compile Include="it\unical\mat\test\language\pddl\PDDLMapperTest.cs" />
     <Compile Include="it\unical\mat\test\specialization\clingo\ClingoDesktopServiceTest.cs" />
     <Compile Include="it\unical\mat\test\specialization\dlv2\DLV2DesktopServiceTest.cs" />
