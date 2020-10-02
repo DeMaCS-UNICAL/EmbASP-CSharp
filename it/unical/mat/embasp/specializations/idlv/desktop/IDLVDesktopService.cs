@@ -19,7 +19,7 @@ namespace it.unical.mat.embasp.specializations.idlv.desktop
             return base.StartSync(programs, options);
         }
 
-        public override void StartAsync(ICallback callback, IList<InputProgram> programs, IList<OptionDescriptor> options)
+        public void StartAsync(ICallback callback, IList<InputProgram> programs, IList<OptionDescriptor> options)
         {
             options.Add(new OptionDescriptor("--t "));
             base.StartAsync(callback, programs, options);
