@@ -66,8 +66,9 @@ namespace it.unical.mat.test
 
             StringBuilder path = new StringBuilder();
 
-           
-            path.Append("C:\\Users\\Giorgio\\Desktop\\");
+            path.Append(".." + System.IO.Path.DirectorySeparatorChar + ".." + System.IO.Path.DirectorySeparatorChar);
+            path.Append("test-resources" + System.IO.Path.DirectorySeparatorChar + "datalog" + System.IO.Path.DirectorySeparatorChar);
+            path.Append("executables" + System.IO.Path.DirectorySeparatorChar + "idlv" + System.IO.Path.DirectorySeparatorChar);
 
             if (OS.IndexOf("win", StringComparison.CurrentCultureIgnoreCase) >= 0)
             {
