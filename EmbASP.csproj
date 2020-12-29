@@ -175,6 +175,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <PackageReference Include="Antlr4.Runtime.Standard" Version="4.7.2" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!--
