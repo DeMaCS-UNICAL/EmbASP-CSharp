@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>EmbASP</RootNamespace>
     <AssemblyName>EmbASP</AssemblyName>
-    <TargetFrameworkVersion>net50</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <NuGetPackageImportStamp>
