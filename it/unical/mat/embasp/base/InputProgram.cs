@@ -13,7 +13,7 @@ namespace it.unical.mat.embasp.@base
         public InputProgram()
         {
             Init();
-            separator = " ";
+            separator = "\n";
         }
 
         public InputProgram(object inputObj)
