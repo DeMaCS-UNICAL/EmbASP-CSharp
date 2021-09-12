@@ -57,7 +57,7 @@ namespace it.unical.mat.test
 
                         @lock.Signal();
                     }));
-                    @lock.Wait(new TimeSpan(0, 0, 0, 0, 15000));
+                    @lock.Wait(new TimeSpan(0, 0, 0, 0, 40000));
                     Assert.IsNotNull(plan);
 
                     if (results_sizes[i - 1] != 0)

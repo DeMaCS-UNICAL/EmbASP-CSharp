@@ -9,6 +9,7 @@
     <FileVersion>8.0.0.0</FileVersion>
     <RepositoryUrl>https://github.com/DeMaCS-UNICAL/EmbASP-CSharp</RepositoryUrl>
     <PackageProjectUrl>https://www.mat.unical.it/calimeri/projects/embasp/</PackageProjectUrl>
+    <Copyright>Copyright ©</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
