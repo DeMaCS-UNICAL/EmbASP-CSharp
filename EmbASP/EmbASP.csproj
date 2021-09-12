@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>EmbASP</RootNamespace>
-    <Copyright>Copyright ©  2018</Copyright>
     <Description>EmbASP is a framework for the integration of Logic Programming in external systems for generic applications, conceived in order to help developers at designing and implementing complex reasoning tasks by means of logic-based solvers on different platforms.</Description>
     <Company>Department of Mathematics and Computer Science, University of Calabria</Company>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
