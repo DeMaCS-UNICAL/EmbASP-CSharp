@@ -61,13 +61,10 @@ namespace it.unical.mat.test
                     Assert.IsNotNull(plan);
 
                     if (results_sizes[i - 1] != 0)
-                    {
-                        if (!String.IsNullOrEmpty(plan.ErrorsString) && plan.ErrorsString.ToLower().Contains("server busy..."))
-                            Console.WriteLine("[WARNING] Server busy occurred!");
-                        else
-                            Assert.IsTrue(String.IsNullOrEmpty(plan.ErrorsString), "Found error in the Plan " + problem + "\n" + plan.ErrorsString);
-                    }
-                        
+                        Assert.IsTrue(String.IsNullOrEmpty(plan.ErrorsString) || plan.ErrorsString.ToLower().Contains("server busy"), "Found error in the Plan " + problem + "\n" + plan.ErrorsString);
+
+                    if (plan.ErrorsString.ToLower().Contains("server busy."))
+                        Console.WriteLine("[WARNING] Server busy occurred!");
 
                     Assert.AreEqual(results_sizes[i - 1], plan.Actions.Count);
 
