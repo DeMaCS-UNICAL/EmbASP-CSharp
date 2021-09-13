@@ -90,7 +90,7 @@ namespace it.unical.mat.test
         {
             int[] results_sizes = { 6, 10, 6, 12, 10, 16, 12, 10, 20, 20, 24, 22, 18, 24, 16, 34, 28, 26, 42, 36, 36, 32, 46, 34, 40, 34, 58, 50, 44, 38, 46, 58, 66, 56, 56 };
 
-            Test(results_sizes, "blocksworld");
+            //Test(results_sizes, "blocksworld");
         }
 
         [TestMethod()]
@@ -98,7 +98,7 @@ namespace it.unical.mat.test
         {
             int[] results_sizes = { 11, 16, 44, 48, 154, 64, 33, 56, 83, 25, 74, 133, 30, 63, 0, 36, 54, 103, 56, 146, 55, 0 };
 
-            Test(results_sizes, "depots");
+            //Test(results_sizes, "depots");
         }
 
         [TestMethod()]
@@ -106,7 +106,7 @@ namespace it.unical.mat.test
         {
             int[] results_sizes = { 15, 23, 31, 39, 47, 55, 63, 71, 79, 87, 95, 103, 111, 119, 127, 135, 143, 151, 159, 167 };
 
-            Test(results_sizes, "gripper");
+            //Test(results_sizes, "gripper");
         }
 
         [TestMethod()]
@@ -114,7 +114,7 @@ namespace it.unical.mat.test
         {
             int[] results_sizes = { 24, 27, 15, 34, 17, 10, 30, 14, 33, 34, 58, 53, 48, 68, 46, 49, 74, 48, 0, 84, 69, 117, 134, 102, 109, 127, 141, 128 };
 
-            Test(results_sizes, "logistics");
+            //Test(results_sizes, "logistics");
         }
     }
 }
