@@ -57,11 +57,17 @@ namespace it.unical.mat.test
 
                         @lock.Signal();
                     }));
-                    @lock.Wait(new TimeSpan(0, 0, 0, 0, 40000));
+                    @lock.Wait(new TimeSpan(0, 0, 0, 0, 15000));
                     Assert.IsNotNull(plan);
 
                     if (results_sizes[i - 1] != 0)
-                        Assert.IsTrue(String.IsNullOrEmpty(plan.ErrorsString), "Found error in the Plan " + problem + "\n" + plan.ErrorsString);
+                    {
+                        if (!String.IsNullOrEmpty(plan.ErrorsString) && plan.ErrorsString.ToLower().Contains("server busy..."))
+                            Console.WriteLine("[WARNING] Server busy occurred!");
+                        else
+                            Assert.IsTrue(String.IsNullOrEmpty(plan.ErrorsString), "Found error in the Plan " + problem + "\n" + plan.ErrorsString);
+                    }
+                        
 
                     Assert.AreEqual(results_sizes[i - 1], plan.Actions.Count);
 
