@@ -13,14 +13,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        submodules: 'recursive'
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.x
+        dotnet-version: 5.0.*
+        
     - name: Restore dependencies
       run: dotnet restore
-    - name: Install NuGet packages
-      run: nuget install packages.config
     - name: Build
       run: dotnet build --no-restore
     - name: Test
